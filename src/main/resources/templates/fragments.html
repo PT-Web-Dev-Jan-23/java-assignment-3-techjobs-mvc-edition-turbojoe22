@@ -27,5 +27,41 @@
         </div>
     </div>
 
+    <form th:fragment = "tableBlock" method = "post">
+        <th:block  th:each = "jobs : ${jobs}">
+            <table class = "job-listing">
+                <tbody th:each = "jobs : ${jobs}"></tbody>
+                <tr>
+                    <td th:text = "ID">ID</td>
+                    <td th:text = "${jobs.id}">ID</td>
+                </tr>
+                <tr>
+                    <td th:text = "Name">Name</td>
+                    <td th:text = "${jobs.name}">Name</td>
+                </tr>
+                <tr>
+                    <td th:text = "Employer">Employer</td>
+                    <td th:text = "${jobs.Employer}">Employer</td>
+                </tr>
+                <tr>
+                    <td th:text = "Location">Location</td>
+                    <td th:text = "${jobs.location}">Name</td>
+                </tr>
+                <tr>
+                    <td th:text = "PositionType">PositionType</td>
+                    <td th:text = "${jobs.positionType}">PositionType</td>
+                </tr>
+                <tr>
+                    <td th:text = "Skill">Skill</td>
+                    <td th:text = "${jobs.coreCompetency}">Skill</td>
+                </tr>
+
+
+            </table>
+        </th:block>
+
+    </form>
+
+
 </body>
 </html>
